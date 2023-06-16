@@ -4,11 +4,11 @@
     "description": "Starting Owl app",
     "main": "src/index.html",
     "scripts": {
-      "serve": "serve src"
+        "serve": "serve src"
     },
     "author": "John",
     "license": "ISC",
     "devDependencies": {
-      "serve": "^11.3.0"
+        "serve": "^14.2.0"
     }
-  }
+}
