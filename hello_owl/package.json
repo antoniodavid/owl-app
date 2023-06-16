@@ -1,14 +1,46 @@
 {
     "name": "hello_owl",
     "version": "0.1.0",
-    "description": "Starting Owl app",
+    "description": "Demo app",
     "main": "src/index.html",
     "scripts": {
-        "serve": "serve src"
+      "test": "jest",
+      "build": "webpack --mode production",
+      "dev": "webpack-dev-server --mode development"
     },
-    "author": "John",
+    "author": "Someone",
     "license": "ISC",
     "devDependencies": {
-        "serve": "^14.2.0"
+      "@babel/core": "^7.8.4",
+      "@babel/plugin-proposal-class-properties": "^7.8.3",
+      "babel-jest": "^25.1.0",
+      "babel-loader": "^8.0.6",
+      "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+      "html-webpack-plugin": "^3.2.0",
+      "jest": "^25.1.0",
+      "regenerator-runtime": "^0.13.3",
+      "serve": "^11.3.0",
+      "webpack": "^4.41.5",
+      "webpack-cli": "^3.3.10",
+      "webpack-dev-server": "^3.10.2"
+    },
+    "dependencies": {
+      "@odoo/owl": "^2.1.3"
+    },
+    "babel": {
+      "plugins": ["@babel/plugin-proposal-class-properties"],
+      "env": {
+        "test": {
+          "plugins": ["transform-es2015-modules-commonjs"]
+        }
+      }
+    },
+    "jest": {
+      "verbose": false,
+      "testRegex": "(/tests/.*(test|spec))\\.js?$",
+      "moduleFileExtensions": ["js"],
+      "transform": {
+        "^.+\\.[t|j]sx?$": "babel-jest"
+      }
     }
-}
+  }
